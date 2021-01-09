@@ -72,10 +72,10 @@ class RepoRight extends Component {
                         <div className="section-2" key={item.id}>
                             <div className="repo-data">
                                 <div className="repo-name">
-                                    <h2>{item.name}</h2> {item.isPrivate}
+                                    <h2>{item.name}</h2> {item.private}
 
                                     <div className="forkedfrom">
-                                        {/* Forked from {} */}
+                                        Forke
                                     </div>
                                     <div className="description">
                                         {item.description}
@@ -119,8 +119,7 @@ class RepoRight extends Component {
                             </div>
 
 
-                        </div> 
-                    ))};
+                        </div> ))};
                     </div>
                    
                 </div>
