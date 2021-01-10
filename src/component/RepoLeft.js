@@ -41,9 +41,9 @@ render(){
                 <div>            
                 {Object.keys(user).map(key => ( 
                     
-                <div key={key} >
+                <div key={user.id} >
                     <div className="avatar">
-                        <img src="https://avatars3.githubusercontent.com/u/49944667?s=460&u=ba1cb9aa44e6cd84b54fe9f10a4974879a93db1e&v=4" alt=""/>
+                        <img src={user.avatar_url} alt=""/>
                                 
                         <div className="bio">
                             <div className="fullname">{user.name}</div>
