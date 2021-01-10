@@ -1,6 +1,7 @@
 import React from 'react';
 import { DropdownButton, Dropdown, Button } from 'react-bootstrap'
 import moment from 'moment';
+import SearchFilter from './Search';
 
 
 /**
@@ -21,7 +22,7 @@ const RightRepo = (props) => {
                     
                     <div className="col-md-8 filter-search">
                                                 
-                        <input type="text" placeholder="Find a repository"/>
+                       <SearchFilter />
 
                     </div>
 

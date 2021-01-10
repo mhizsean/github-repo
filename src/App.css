@@ -250,7 +250,21 @@ font-size: 14px;
   color: #22612f;
 }
 
+.form-group {
+  margin-bottom: 0.2rem !important;
+}
 
+.form-group .border {
+  border-color: #586069 !important;
+}
+
+.form-control-plaintext {
+  font-size: 12px !important;
+}
+
+.form-control, .form-control-plaintext {
+  border-color: #586069 !important;
+}
 .footer {
   color: #58a6ff;
   margin-top: 10px;

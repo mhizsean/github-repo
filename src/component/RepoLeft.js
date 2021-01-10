@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Form } from 'react-bootstrap'
 
 export class Repoleft extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ render(){
                 <div>            
             
                     
-                <div  >
+                <div>
                     <div className="avatar">
                         <img src={user.avatar_url} alt=""/>
                                 
@@ -57,9 +58,38 @@ render(){
                     </div>
 
                     <div className="edit-profile">
-                            <button>
+                        <button >
                             Edit profile
                         </button>
+                        <Form className="mt-2">
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Control as="textarea" rows={3} className=" bg-transparent" />
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Control plaintext readOnly defaultValue="location" className="text-white-50 border rounded px-1 py-0" />
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Control as="select" size="sm" className="bg-transparent">
+                                    <option>email@example.com</option>
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Control plaintext defaultValue="email@example.com" className="text-white-50 border  rounded px-1 py-0" />
+                            </Form.Group>
+
+                            <Form.Group>
+                             <Form.Control plaintext defaultValue="email@example.com" className="text-white-50 border  rounded px-1 py-0" />
+
+                            </Form.Group>
+
+                            <div className="d-flex flex-row">
+                                <button className="bg-teal">save</button>
+                                <button className="bg-dark-gray">cancel</button>
+                            </div>
+                        </Form>
                     </div>
                                     
                     <div>
