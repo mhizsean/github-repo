@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { DropdownButton, Dropdown, Button } from 'react-bootstrap'
 import moment from 'moment';
 import SearchFilter from './Search';
@@ -12,8 +12,13 @@ import SearchFilter from './Search';
 const RightRepo = (props) => {
 
     const { repos } = props;
+    const [input, setInput ] = useState("");
+const handleChange= (e) => {
+    e.preventDefault()
+    setInput(e.target.value);
+}
 
-    if (!repos || repos.length  === 0) return <p>No repo found</p>
+   if (!repos || repos.length  === 0) return <p>No repo found</p>
     else {
     return(
         <div>
@@ -22,7 +27,7 @@ const RightRepo = (props) => {
                     
                     <div className="col-md-8 filter-search">
                                                 
-                       <SearchFilter />
+                       <SearchFilter handleChange={handleChange} input={input}/>
 
                     </div>
 
@@ -45,7 +50,7 @@ const RightRepo = (props) => {
                     </div>
                 </div>                       
             </div>
-            {repos.map(repo => 
+            {repos.filter(repo=>repo.name.toLowerCase().includes(input.toLowerCase())).map(repo => 
             <div className="section-2" key={repo.id}>
                 <div className="repo-data">
                     <div className="repo-name">

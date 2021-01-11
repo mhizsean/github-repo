@@ -5,15 +5,10 @@ import React, { useState } from 'react'
 * @function SearchFilter
 **/
 
-const SearchFilter = (props) => {
+const SearchFilter = ({handleChange,input},props) => {
 
     const { repos } = props;
 
-    const [input, setInput ] = useState("");
-    const handleChange = (e) => {
-        e.preventDefault()
-        setInput(e.target.value);
-    }
 
     // if(input.length > 0) {
     //     repos = repos.filter((i) => {
